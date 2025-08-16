@@ -54,6 +54,10 @@ def send_otp_email(receiver_email, otp):
         print(f"❌ Failed to send OTP email: {e}")
 
 # --- Routes ---
+@app.route("/", methods=["GET"])
+def home():
+    
+    return jsonify({"message": "Welcome"}), 200
 @app.route("/api/register", methods=["POST"])
 def register():
     data = request.get_json()
