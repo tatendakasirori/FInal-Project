@@ -78,7 +78,7 @@ export function LoginForm({ onSubmit }: LoginFormProps) {
         )}
       </div>
       
-      <Button type="submit" className="w-full" disabled={isSubmitting}>
+      <Button type="submit" className="w-full shadow-sm" disabled={isSubmitting}>
         {isSubmitting ? 'Loading...' : 'Sign In'}
       </Button>
     </form>
@@ -159,7 +159,7 @@ export function SignupForm({ onSubmit }: SignupFormProps) {
         )}
       </div>
       
-      <Button type="submit" className="w-full" disabled={isSubmitting}>
+      <Button type="submit" className="w-full shadow-sm" disabled={isSubmitting}>
         {isSubmitting ? 'Loading...' : 'Sign Up'}
       </Button>
     </form>
