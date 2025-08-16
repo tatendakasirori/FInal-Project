@@ -8,6 +8,13 @@ export default function SignupPage() {
   const handleSignup = async (data: any) => {
     // This would normally connect to your API
     console.log('Signup form submitted:', data)
+    const res = await fetch("/api/register", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(data)
+    })
     // For demo purposes, we'll just log the data and simulate a delay
     await new Promise(resolve => setTimeout(resolve, 1000))
     // New users are redirected to the user dashboard
